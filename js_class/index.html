@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Sticky footer</title>
+</head>
+<body>
+     <header>
+         <h1>The Heead</h1>
+     </header>
+     <main>
+         <h1>The Main</h1>
+         <input id="input" type="text">
+         <button id="button" > Click</button>
+     </main>
+     <footer>
+         <h1>The Footer</h1>
+     </footer>
+
+     <script>
+            let display = document.getElementById("input")
+            let increment = 0
+            let timer;
+            let click = document.getElementById("button");
+            click.addEventListener('click', () => {
+                display.value = increment++;
+
+                timer = setTimeout(() =>{
+                    increment = 0
+                }, 5000)
+                
+            });
+
+
+     </script>
+</body>
+clearTimeout(timer)
+</html>
