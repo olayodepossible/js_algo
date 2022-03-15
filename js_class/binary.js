@@ -33,7 +33,7 @@ const binarySearch = (arr, n) => {
         else {
             min = guess + 1;
         }
-    }
+    } 
     return -1;
 
 }
