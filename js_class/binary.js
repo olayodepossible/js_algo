@@ -60,6 +60,27 @@ const search1 = (arr, n) => {
 
 }
 
+const binarySearchReturnIndex = (arr, n) => {
+    let arrSort = arr.sort();
+    let left = 0;
+    let right = arr.length;
+
+    while (left < right) {
+        const mid = Math.floor((max + min)/2) ;
+
+        if(arrSort[mid] > n){
+            right = mid;
+        }
+        else {
+            left = mid + 1;
+        }
+    } 
+    return left;
+
+}
+
+
+
 const r1 = binarySearch(arr, targetNum)
 // const r2 = search1(arr, targetNum)
 console.log("r1 --> ", r1);
